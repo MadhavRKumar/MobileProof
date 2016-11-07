@@ -34,7 +34,6 @@ public class PageGenerator {
                 "             skipTags: [\"script\",\"noscript\",\"style\",\"textarea\",\"code\"] /* removed pre as wikimedia renders math in there */\n" +
                 "         },\n" +
                 "         TeX: {\n" +
-                "           extensions: [ \"xypic.js\",\"handle-floats.js\" ],\n" +
                 "           Macros: {\n" +
                 "             /* Wikipedia compatibility: these macros are used on Wikipedia */\n" +
                 "             empty: '\\\\emptyset',\n" +
