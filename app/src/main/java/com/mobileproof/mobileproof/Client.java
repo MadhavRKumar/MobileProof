@@ -37,6 +37,7 @@ public class Client extends AsyncTask<Void, Void, String>{
             while( (line = in.readLine()) != null){
                 response += line;
             }
+            response =  new PageGenerator(response).getHtml();
         } catch (UnknownHostException e) {
             response = "Don't know about host";
         } catch (IOException e) {

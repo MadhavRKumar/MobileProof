@@ -48,9 +48,7 @@ public class SearchResultsActivity extends AppCompatActivity {
             WebView wv1=(WebView)findViewById(R.id.webView);
             wv1.getSettings().setJavaScriptEnabled(true);
             try {
-                String htmlData = client.get();
-                PageGenerator pg = new PageGenerator(htmlData);
-                wv1.loadDataWithBaseURL("https://proofwiki.org/", pg.getHtml(), "text/html", null, null);
+                wv1.loadDataWithBaseURL("https://proofwiki.org/", client.get(), "text/html", null, null);
             } catch (InterruptedException | ExecutionException e) {
                 makeSnackbar(e.getMessage());
             }
